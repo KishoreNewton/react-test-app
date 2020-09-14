@@ -9,5 +9,5 @@ jobs:
     steps:
       - name: Send Slack Message
         run: |
-        curl -X POST -H 'Content-type: application/json' --data '{"text": "new release ${{ github.event.release.tag_name }} is out, <${{ github.event.release.html_url }}|check it out now>"}' ${{ secrets.SECURE_API_URL }}
+          curl -X POST -H 'Content-type: application/json' --data '{"text": "new release ${{ github.event.release.tag_name }} is out, <${{ github.event.release.html_url }}|check it out now>"}' ${{ secrets.SECURE_API_URL }}
 
