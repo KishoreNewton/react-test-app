@@ -8,5 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Slack Message
-        run: curl -X POST -H 'Content-type: application/json' --data '{"text":"Hello, World!"}' ${{ secrets.SECURE_API_URL }}
+        run: |
+        curl -X POST -H 'Content-type: application/json' --data '{"text":"Hello, World!"}' ${{ secrets.SECURE_API_URL }}
 
