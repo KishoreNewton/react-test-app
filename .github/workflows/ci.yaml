@@ -16,9 +16,7 @@ jobs:
         with:
           node-verison: "12.x"
       - run: npm ci
-      - run: npm test -- --coverage
-        env:
-           CI: true
+      - run: npm run test
       - name: Build Project
         if: github.event_name == 'push'
         run: npm run build
